@@ -51,7 +51,7 @@ Ora che è stata creata una risorsa di creazione, è possibile usarla per creare
 
     Se <u>non</u> viene chiesto di scegliere una risorsa Lingua, è possibile che nella sottoscrizione siano presenti più risorse di questo tipo e in tal caso:
 
-    1. Sulla barra nella parte superiore della pagina selezionare il pulsante **Impostazioni (&#9881;)**.
+    1. Nella barra nella parte superiore della pagina, selezionare il **Settings (&#9881;)**.
     2. Nella pagina **Impostazioni** visualizzare la scheda **Risorse**.
     3. Selezionare la risorsa del servizio Lingua appena creata e fare clic su **Cambiare risorsa**.
     4. Nella parte superiore della pagina fare clic su **Language Studio** per tornare alla home page di Language Studio
