@@ -10,18 +10,18 @@ Oltre ad altre funzionalità di elaborazione del linguaggio naturale, il servizi
 
 Per testare l'estrazione di entità personalizzata, verrà creato un modello e ne verrà eseguito il training tramite Azure AI Language Studio, quindi verrà usata un'applicazione da riga di comando per testarlo.
 
-## Effettuare il provisioning di una risorsa di *Lingua di Azure AI*
+## Effettuare il provisioning di una risorsa *Lingua di Azure AI*
 
-Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare il provisioning di una risorsa del servizio **Lingua di Azure AI**. Inoltre, per usare la classificazione personalizzata del testo, è necessario abilitare la funzionalità **Estrazione e classificazione personalizzata del testo**.
+Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare il provisioning di una risorsa del **servizio Lingua di Azure AI**. Inoltre, per usare la classificazione personalizzata del testo, è necessario abilitare la funzionalità **Estrazione e classificazione personalizzata del testo**.
 
 1. In un browser, aprire il portale di Azure all'indirizzo `https://portal.azure.com` e accedere con il proprio account Microsoft.
-1. Selezionare il pulsante **Crea una risorsa**, cercare *Lingua*, quindi creare una risorsa del servizio **Lingua**. Una volta nella pagina in *Seleziona funzionalità aggiuntive*, selezionare la funzionalità personalizzata contenente l'**estrazione di riconoscimento entità denominata personalizzata**. Creare la risorsa con le impostazioni seguenti:
+1. Selezionare il pulsante **Crea una risorsa**, cercare *Lingua*, quindi creare una risorsa del servizio **Lingua**. Una volta nella pagina per *Selezionare funzionalità aggiuntive*, selezionare la funzionalità personalizzata contenente **l'estrazione di riconoscimento entità denominata personalizzata**. Creare la risorsa con le impostazioni seguenti:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*
-    - **Gruppo di risorse**: *selezionare o creare un gruppo di risorse*
+    - **Gruppo di risorse**: *Selezionare o creare un gruppo di risorse*
     - **Area**: *scegliere una qualsiasi area disponibile*
     - **Nome**: *immettere un nome univoco*
-    - **Piano tariffario**: selezionare **F0** (*gratuito*) o **S** (*standard*) se F non è disponibile.
-    - **Account di archiviazione**: nuovo account di archiviazione:
+    - **Piano tariffario**: Selezionare **F0** (*gratuito*) o **S** (*standard*) se F non è disponibile.
+    - **Account di archiviazione**: Nuovo account di archiviazione:
       - **Nome account di archiviazione**: *immettere un nome univoco*.
       - **Tipo di account di archiviazione: ** Archiviazione con ridondanza locale Standard
     - **Avviso per intelligenza artificiale responsabile**: opzione selezionata
@@ -34,21 +34,21 @@ Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare
 
 Dopo aver creato il servizio Lingua di Azure AI e l'account di archiviazione, sarà necessario caricare annunci di esempio per eseguire il training del modello in un secondo momento.
 
-1. In una nuova scheda del browser, scaricare gli annunci classificati di esempio da `https://aka.ms/entity-extraction-ads` ed estrarre i file nella cartella desiderata.
+1. In una nuova scheda del browser, scarica gli annunci classificati di esempio da `https://aka.ms/entity-extraction-ads` ed estrai i file in una cartella di tua scelta.
 
 2. Nel portale di Azure passare all'account di archiviazione creato e selezionarlo.
 
-3. Nell'account di archiviazione, selezionare **Configurazione**, che si trova sotto **Impostazioni** e abilitare l'opzione **Consenti accesso anonimo BLOB**, quindi selezionare **Salva**.
+3. Nell'account di archiviazione, selezionare **Configurazione **, che si trova sotto **Impostazioni** e abilitare l'opzione **Consenti accesso anonimo BLOB** e quindi selezionare **Salva**.
 
-4. Dal menu a sinistra selezionare **Contenitori** che si trova sotto **Archiviazione dati**. Nella schermata visualizzata selezionare **+ Contenitore**. Assegnare al contenitore il nome `classifieds`, quindi impostare **Livello di accesso anonimo** su **Contenitore (accesso in lettura anonimo per contenitori e BLOB)**.
+4. Selezionare **Contenitori** dal menu a sinistra, che si trova sotto **Archiviazione dati**. Nella schermata visualizzata selezionare **+ Contenitore**. Assegnare al contenitore il nome `classifieds`, quindi impostare **Livello di accesso anonimo** su **Contenitore (accesso in lettura anonimo per contenitori e BLOB)**.
 
-    > **NOTA**: Quando si configura un account di archiviazione per una soluzione reale, assicurarsi di assegnare il livello di accesso appropriato. Per altre informazioni su ogni livello di accesso, vedere la [documentazione di Archiviazione di Azure](https://learn.microsoft.com/azure/storage/blobs/anonymous-read-access-configure).
+    > **NOTA**: quando si configura un account di archiviazione per una soluzione reale, prestare attenzione ad assegnare il livello di accesso appropriato. Per altre informazioni su ogni livello di accesso, vedere la [documentazione su Archiviazione di Azure](https://learn.microsoft.com/azure/storage/blobs/anonymous-read-access-configure).
 
-5. Dopo aver creato il contenitore, selezionarlo e fare clic sul pulsante **Carica** per caricare gli annunci di esempio scaricati.
+5. Dopo aver creato il contenitore, selezionarlo e fare clic sul pulsante **Carica** e caricare gli annunci di esempio scaricati.
 
 ## Creare un progetto di Riconoscimento entità denominata personalizzata
 
-A questo punto è possibile creare un progetto di riconoscimento entità denominata personalizzata. Questo progetto offre un luogo di lavoro per compilare il modello, eseguirne il training e quindi distribuirlo.
+A questo punto è possibile creare un progetto di riconoscimento di entità denominato personalizzato. Questo progetto offre un luogo di lavoro per compilare il modello, eseguirne il training e quindi distribuirlo.
 
 > **NOTA**: È anche possibile creare, compilare, eseguire il training e distribuire il modello tramite l'API REST.
 
@@ -58,11 +58,11 @@ A questo punto è possibile creare un progetto di riconoscimento entità denomin
     - **Directory di Azure**: directory di Azure contenente la sottoscrizione.
     - **Sottoscrizione di Azure**: sottoscrizione di Azure in uso.
     - **Tipo di risorsa**: lingua.
-    - **Risorsa linguistica**: risorsa di Lingua di Azure AI creata in precedenza.
+    - **Risorsa della lingua**: risorsa Lingua di Azure AI creata in precedenza.
 
     Se <u>non</u> viene chiesto di scegliere una risorsa Lingua, è possibile che nella sottoscrizione siano presenti più risorse di questo tipo e in tal caso:
 
-    1. Nella barra nella parte superiore della pagina, selezionare il pulsante **Impostazioni (&#9881;)**.
+    1. Nella barra nella parte superiore della pagina, selezionare il **Settings (&#9881;)**.
     2. Nella pagina **Impostazioni** visualizzare la scheda **Risorse**.
     3. Selezionare la risorsa del servizio Lingua appena creata e fare clic su **Cambiare risorsa**.
     4. Nella parte superiore della pagina fare clic su **Language Studio** per tornare alla pagina iniziale di Language Studio.
@@ -70,7 +70,7 @@ A questo punto è possibile creare un progetto di riconoscimento entità denomin
 1. Nella parte superiore del portale, nel menu **Crea nuovo** selezionare **Riconoscimento entità denominata personalizzata**.
 
 1. Creare un nuovo progetto con le seguenti impostazioni:
-    - **Archiviazione Connessione**: *questo valore è probabilmente già compilato. Se non lo è, immettere l'account di archiviazione*
+    - **Archiviazione Connessione**: *Questo valore è probabilmente già compilato. Modificarlo nell'account di archiviazione, se non lo è già*
     - **Informazioni di base:**
     - **Nome**: `CustomEntityLab`
         - **Lingua principale testo**: Inglese (US)
@@ -80,18 +80,20 @@ A questo punto è possibile creare un progetto di riconoscimento entità denomin
         - **Contenitore dell'archivio BLOB**: classificazioni
         - **I file sono etichettati con classi?**: no, è necessario assegnare etichette ai file nell'ambito di questo progetto
 
+> **Suggerimento**: se viene visualizzato un errore relativo alla mancata autorizzazione per eseguire questa operazione, è necessario aggiungere un'assegnazione di ruolo. Per risolvere questo problema, per l'utente che esegue il lab, è stato aggiunto il ruolo "Collaboratore ai dati del BLOB di archiviazione" nell'account di archiviazione. Per informazioni dettagliate, vedere la [pagina della documentazione](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/how-to/create-project?tabs=portal%2Clanguage-studio#enable-identity-management-for-your-resource)
+
 ## Assegnare etichette ai dati
 
 Dopo aver creato il progetto, è necessario assegnare etichette ai dati per eseguire il training del modello al fine di identificare le entità.
 
-1. Se la pagina **Etichettatura dei dati** non è già aperta, nel riquadro a sinistra selezionare **Etichettatura dei dati**. Viene visualizzato un elenco dei file caricati nell'account di archiviazione.
+1. Se la pagina **Etichettatura dati** non è già aperta, nel riquadro a sinistra selezionare **Etichettatura dati**. Viene visualizzato un elenco dei file caricati nell'account di archiviazione.
 1. Sul lato destro, nel riquadro **Attività**, selezionare**Aggiungi entità** e aggiungere una nuova entità denominata `ItemForSale`.
 1.  Ripetere il passaggio precedente o creare le entità seguenti:
     - `Price`
     - `Location`
 1. Dopo aver creato le tre entità, selezionare **Ad 1.txt** in modo da poterla leggere.
 1. In *Ad 1.txt*: 
-    1. Evidenziare il testo *face cord of firewood* e selezionare l'entità **ItemForSale**.
+    1. Evidenziare il *pancale di legna da ardere* e selezionare l'entità **ItemForSale**.
     1. Evidenziare il testo *Denver, CO* e selezionare l'entità **Location**.
     1. Evidenziare il testo *$90* e selezionare l'entità **Price**.
 1. Nel riquadro **Attività**, si noti che questo documento verrà aggiunto al set di dati per il training del modello.
@@ -131,13 +133,13 @@ Quando il training del modello restituisce risultati soddisfacenti, è possibile
 
 Per testare le funzionalità di estrazione di entità personalizzate del servizio Lingua di Azure AI, si svilupperà una semplice applicazione console in Visual Studio Code.
 
-> **Suggerimento**: se il repository **mslearn-ai-language** è già stato clonato, aprirlo in Visual Studio Code. In caso contrario, eseguire questi passaggi per clonarlo nell'ambiente di sviluppo.
+> **Suggerimento**: Se il repository **mslearn-ai-language** è già stato clonato, aprirlo in Visual Studio Code. In caso contrario, eseguire questi passaggi per clonarlo nell'ambiente di sviluppo.
 
 1. Avviare Visual Studio Code.
 2. Aprire il riquadro comandi (MAIUSC+CTRL+P) ed eseguire un comando **Git: Clone** per clonare il repository `https://github.com/MicrosoftLearning/mslearn-ai-language` in una cartella locale. Non è importante usare una cartella specifica.
 3. Dopo la clonazione del repository, aprire la cartella in Visual Studio Code.
 
-    > **Nota**: se in Visual Studio Code viene visualizzato un messaggio popup che chiede se si considera attendibile il codice da aprire, fare clic sull'opzione **Sì, mi fido degli autori** nel popup.
+    > **Nota**: Se Visual Studio Code visualizza un messaggio popup per chiedere se si considera attendibile il codice che si apre, fare clic sull'opzione **Sì, considero attendibili gli autori** nel popup.
 
 4. Attendere il completamento dell'installazione di file aggiuntivi per supportare i progetti in codice C# nel repository.
 
@@ -145,10 +147,10 @@ Per testare le funzionalità di estrazione di entità personalizzate del servizi
 
 ## Configurare l'applicazione
 
-Sono state fornite applicazioni per C# e per Python. Entrambe le app hanno la stessa funzionalità. Prima di tutto, verranno completate alcune parti chiave dell'applicazione per consentirle di usare la risorsa Lingua di Azure AI.
+Sono state fornite applicazioni sia per C# che per Python. Entrambe le app presentano la stessa funzionalità. Prima di tutto, verranno completate alcune parti chiave dell'applicazione per abilitarla all'uso della risorsa Lingua di Azure AI.
 
 1. Nel riquadro **Esplora risorse** di Visual Studio Code, passare alla cartella **Labfiles/05-custom-entity-recognition** ed espandere la cartella **CSharp** o **Python** in base alle preferenze di lingua e alla cartella **custom-entities** che contiene. Ogni cartella contiene i file specifici della lingua per un'app in cui si intende integrare la funzionalità di classificazione del testo di Lingua di Azure AI.
-1. Fare clic con il pulsante destro del mouse sulla cartella **custom-entities** contenente i file di codice e aprire un terminale integrato. Installare quindi il pacchetto Text Analytics SDK di Lingua di Azure AI eseguendo il comando appropriato per la lingua scelta:
+1. Fare clic con il pulsante destro del mouse sulla cartella **custom-entities** contenente i file di codice e aprire un terminale integrato. Installare quindi il pacchetto Text Analytics SDK di Lingua di Azure AI eseguendo il comando appropriato per il linguaggio scelto:
 
     **C#:**
 
@@ -167,20 +169,20 @@ Sono state fornite applicazioni per C# e per Python. Entrambe le app hanno la st
     - **C#**: appsettings.json
     - **Python**: .env
     
-1. Aggiornare i valori di configurazione per includere l'**endpoint** e una **chiave** dalla risorsa Lingua di Azure creata (disponibile nella pagina **Chiavi ed endpoint** per la risorsa Lingua di Azure AI nel portale di Azure). Il file deve contenere già i nomi di progetto e distribuzione per il modello di estrazione di entità personalizzate.
+1. Aggiornare i valori di configurazione per includere l'**endpoint** e una **chiave** dalla risorsa Lingua di Azure creata (disponibile nella pagina **Chiavi ed endpoint** per la risorsa Lingua di Azure AI). Il file deve contenere già i nomi di progetto e distribuzione per il modello di estrazione di entità personalizzato.
 1. Salvare il file di configurazione.
 
 ## Aggiungere codice per estrarre le entità
 
-A questo punto è possibile usare il servizio Lingua di Azure AI per estrarre entità personalizzate dal testo.
+A questo momento è possibile usare il servizio Lingua di Azure AI per estrarre entità personalizzate dal testo.
 
-1. Espandere la cartella **ads** nella cartella **custom-entities** per visualizzare gli annunci classificati che l'applicazione analizzerà.
+1. Espandere la cartella **annunci** nella cartella **custom-entities** per visualizzare gli annunci classificati che verranno analizzati dall'applicazione.
 1. Nella cartella **custom-entities**, aprire il file di codice per l'applicazione client:
 
     - **C#**: Program.cs
     - **Python**: custom-entities.py
 
-1. Individuare il commento **Import namespaces**. In questo commento aggiungere quindi il codice seguente specifico per la lingua per importare gli spazi dei nomi necessari per usare Text Analytics SDK:
+1. Trovare gli **spazi dei nomi import** del commento. In questo commento aggiungere quindi il codice seguente specifico per la lingua per importare gli spazi dei nomi necessari per usare Text Analytics SDK:
 
     **C#**: Programs.cs
 
@@ -198,7 +200,7 @@ A questo punto è possibile usare il servizio Lingua di Azure AI per estrarre en
     from azure.ai.textanalytics import TextAnalyticsClient
     ```
 
-1. Nella funzione **Main**, si noti che il codice per caricare l'endpoint e la chiave del servizio Lingua di Azure AI e i nomi di progetto e distribuzione indicati nel file di configurazione sono già stati forniti. Individuare quindi il commento **Create client using endpoint and key** e aggiungere il codice seguente per creare un client per l'API Analisi del testo:
+1. Nella funzione **Principale**, si noti che il codice per caricare l'endpoint e la chiave del servizio Lingua di Azure AI e i nomi di progetto e distribuzione dal file di configurazione sono già stati forniti. Individuare quindi il commento **Create client using endpoint and key** e aggiungere il codice seguente per creare un client per l'API Analisi del testo:
 
     **C#**: Programs.cs
 
@@ -217,8 +219,8 @@ A questo punto è possibile usare il servizio Lingua di Azure AI per estrarre en
     ai_client = TextAnalyticsClient(endpoint=ai_endpoint, credential=credential)
     ```
 
-1. Nella funzione **Main**, si noti che il codice esistente legge tutti i file nella cartella **ads** e crea un elenco del loro contenuto. Nel caso del codice C#, viene usato un elenco di oggetti **TextDocumentInput** per includere il nome del file come ID e la lingua. In Python viene usato un semplice elenco del contenuto del testo.
-1. Individuare il commento **Extract entities** e aggiungere il codice seguente:
+1. Nella funzione **Principale**, si noti che il codice esistente legge tutti i file nella cartella **annunci** e crea un elenco contenente il relativo contenuto. Nel caso del codice C#, viene usato un elenco di oggetti **TextDocumentInput** per includere il nome del file come ID e il linguaggio. In Python viene usato un semplice elenco del contenuto del testo.
+1. Trovare il commento **Estrai le entità** e aggiungere il codice seguente:
 
     **C#**: Program.cs
 
