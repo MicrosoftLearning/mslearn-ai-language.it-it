@@ -91,6 +91,8 @@ Per consentire al modello di stimare la finalità richiesta da un utente, è nec
     - `what time is it?`
     - `tell me the time`
 
+    > **NOTA** Per aggiungere una nuova espressione, scrivere l'espressione nella casella di testo accanto alla finalità e quindi premere INVIO. 
+
 1. Selezionare la finalità **GetDay** e aggiungere le espressioni seguenti come input di esempio per tale finalità:
     - `what day is it?`
     - `what's the day?`
@@ -193,6 +195,8 @@ In alcuni casi, i valori validi per un'entità possono essere limitati a un elen
     | List key | sinonimi|
     |-------------------|---------|
     | `Sunday` | `Sun` |
+
+    > **NOTA** Per immettere i campi del nuovo elenco, inserire il valore `Sunday` nel campo di testo, quindi fare clic sul campo in cui viene visualizzato "Digitare il valore e premere Invio...", immettere i sinonimi e premere INVIO.
 
 1. Ripetere il passaggio precedente per aggiungere i componenti dell'elenco seguenti:
 
