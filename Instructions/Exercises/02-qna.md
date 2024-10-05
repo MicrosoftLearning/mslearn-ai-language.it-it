@@ -15,9 +15,9 @@ Il servizio **Lingua di Azure AI** include una funzionalità di *risposta alla d
 Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare il provisioning di una risorsa del **servizio Lingua di Azure AI**. Inoltre, per creare e ospitare una knowledge base per la risposta alla domanda, è necessario abilitare la funzionalità **Risposta alla domanda**.
 
 1. Aprire il portale di Azure all'indirizzo `https://portal.azure.com` ed eseguire l'accesso usando l'account Microsoft associato alla sottoscrizione di Azure.
-1. Nel campo di ricerca nella parte superiore immettere **Servizi di Azure AI** e premere **INVIO**.
-1. Selezionare **Crea** nella risorsa **Servizio Lingua** nei risultati.
-1. **Selezionare** il blocco **Risposta personalizzata alle domande**. Selezionare quindi **Continua a creare la risorsa**. Sarà necessario immettere le impostazioni seguenti:
+1. Selezionare **Crea una risorsa**.
+1. Nel campo di ricerca, cercare **Servizio di linguaggio**. Quindi, nei risultati selezionare **Crea** in **Servizio linguistico**.
+1. Selezionare il blocco **Risposta personalizzata alle domande**. Selezionare quindi **Continua a creare la risorsa**. Sarà necessario immettere le impostazioni seguenti:
 
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*
     - **Gruppo di risorse**: *Scegliere o creare un gruppo di risorse*.
@@ -54,7 +54,7 @@ Per creare una knowledge base per la risposta alla domanda nella risorsa Lingua 
     4. Nella parte superiore della pagina fare clic su **Language Studio** per tornare alla pagina iniziale di Language Studio.
 
 1. Nella parte superiore del portale scegliere **Risposta personalizzata alle domande** dal menu **Crea nuovo**.
-1. Nella procedura guidata ***Crea un progetto**, nella pagina **Scegli l'impostazione della lingua** selezionare l'opzione per **impostare la lingua per tutti i progetti in questa risorsa** e selezionare la lingua **Inglese**. Quindi seleziona **Avanti**.
+1. Nella procedura guidata ***Crea un progetto**, nella pagina **Scegli l'impostazione della lingua**, selezionare l'opzione **Imposta la lingua per tutti i progetti in questa risorsa** e selezionare la lingua **Inglese**. Quindi seleziona **Avanti**.
 1. Nella pagina **Immetti le informazioni di base** immettere i dettagli seguenti:
     - **Nome** `LearnFAQ`
     - **Descrizione**: `FAQ for Microsoft Learn`
@@ -108,7 +108,7 @@ Ora che si ha una knowledge base, è possibile testarla in Language Studio.
 
 La knowledge base offre un servizio back-end che le applicazioni client possono usare per rispondere alle domande. È ora possibile pubblicare la knowledge base e accedere alla rispettiva interfaccia REST da un client.
 
-1. Nel progetto **LearnFAQ** in Language Studio selezionare la pagina **Deploy knowledge base** (Distribuisci knowledge base).
+1. Nel progetto **LearnFAQ** in Language Studio, selezionare la pagina **Implementa knowledge base** dal menu di spostamento sulla sinistra.
 1. Nella parte superiore della pagina selezionare **Distribuisci**. Selezionare quindi **Distribuisci** per confermare la distribuzione della knowledge base.
 1. Al termine della distribuzione, fare clic su **Ottieni URL di stima** per visualizzare l'endpoint REST per la knowledge base e copiarlo negli Appunti e notare che la richiesta di esempio include i parametri per:
     - **projectName**: nome del progetto (dovrebbe essere *LearnFAQ*)

@@ -15,7 +15,8 @@ Si supponga, ad esempio, che un'agenzia di viaggi voglia elaborare recensioni di
 Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare il provisioning di una risorsa del servizio **Lingua di Azure AI** nella sottoscrizione di Azure.
 
 1. Aprire il portale di Azure all'indirizzo `https://portal.azure.com` ed eseguire l'accesso usando l'account Microsoft associato alla sottoscrizione di Azure.
-1. Nel campo di ricerca nella parte superiore cercare i **Servizi di Azure AI**. Quindi, nei risultati selezionare **Crea** in **Servizio linguistico**.
+1. Selezionare **Crea una risorsa**.
+1. Nel campo di ricerca, cercare **Servizio di linguaggio**. Quindi, nei risultati selezionare **Crea** in **Servizio linguistico**.
 1. Selezionare **Continua a creare la risorsa**.
 1. Effettuare il provisioning della risorsa usando le impostazioni seguenti:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
@@ -26,13 +27,13 @@ Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare
     - **Informativa sull'Intelligenza artificiale responsabile**: D'accordo.
 1. Selezionare **Rivedi e crea**, quindi **Crea** per effettuare il provisioning della risorsa.
 1. Attendere il completamento della distribuzione e quindi passare alla risorsa distribuita.
-1. Visualizzare la pagina **Chiavi ed endpoint**. Le informazioni contenute in questa pagina saranno necessarie più avanti nell'esercizio.
+1. Individuare **Endpoint e chiavi** nella sezione **Gestione risorse**. Le informazioni contenute in questa pagina saranno necessarie più avanti nell'esercizio.
 
 ## Preparare lo sviluppo di un'app in Visual Studio Code
 
 Si svilupperà l'app di analisi del testo usando Visual Studio Code. I file di codice per l'app sono stati forniti in un repository GitHub.
 
-> **Suggerimento**: Se il repository **mslearn-ai-language** è già stato clonato, aprirlo in Visual Studio Code. In caso contrario, seguire questa procedura per clonarla nell'ambiente di sviluppo.
+> **Suggerimento**: se il repository **mslearn-ai-language** è già stato clonato, aprirlo in Visual Studio Code. In caso contrario, eseguire questi passaggi per clonarlo nell'ambiente di sviluppo.
 
 1. Avviare Visual Studio Code.
 2. Aprire il riquadro comandi (MAIUSC+CTRL+P) ed eseguire un comando **Git: Clone** per clonare il repository `https://github.com/MicrosoftLearning/mslearn-ai-language` in una cartella locale. Non è importante usare una cartella specifica.
