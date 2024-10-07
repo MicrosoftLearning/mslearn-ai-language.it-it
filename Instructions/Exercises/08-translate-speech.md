@@ -37,7 +37,7 @@ Si svilupperà l'app voce usando Visual Studio Code. I file di codice per l'app 
 1. Aprire il riquadro comandi (MAIUSC+CTRL+P) ed eseguire un comando **Git: Clone** per clonare il repository `https://github.com/MicrosoftLearning/mslearn-ai-language` in una cartella locale. Non è importante usare una cartella specifica.
 1. Dopo la clonazione del repository, aprire la cartella in Visual Studio Code.
 
-    > **Nota**: se in Visual Studio Code viene visualizzato un messaggio popup che chiede se si considera attendibile il codice da aprire, fare clic sull'opzione **Sì, mi fido degli autori** nel popup.
+    > **Nota**: Se Visual Studio Code visualizza un messaggio popup per chiedere se si considera attendibile il codice che si apre, fare clic sull'opzione **Sì, considero attendibili gli autori** nel popup.
 
 1. Attendere il completamento dell'installazione di file aggiuntivi per supportare i progetti in codice C# nel repository.
 
@@ -45,7 +45,7 @@ Si svilupperà l'app voce usando Visual Studio Code. I file di codice per l'app 
 
 ## Configurare l'applicazione
 
-Sono state fornite applicazioni per C# e per Python. Entrambe le app presentano la stessa funzionalità. Prima di tutto, verranno completate alcune parti chiave dell'applicazione per abilitarla all'uso della risorsa di Voce di Azure AI.
+Sono state fornite applicazioni sia per C# che per Python. Entrambe le app presentano la stessa funzionalità. Prima di tutto, verranno completate alcune parti chiave dell'applicazione per abilitarla all'uso della risorsa di Voce di Azure AI.
 
 1. Nel riquadro **Esplora risorse** in Visual Studio Code, esplorare la cartella **Labfiles/08-speech-translation** ed espandere la cartella **CSharp** o **Python** in base alla scelta della lingua e alla cartella **translator** in essa contenuta. Ogni cartella contiene i file di codice specifici della lingua per l'app in cui si vuole integrare la funzionalità Voce di Azure AI.
 1. Fare clic con il pulsante destro del mouse sulla cartella **translator** contenente i file di codice e aprire un terminale integrato. Installare quindi il pacchetto SDK di Voce di Azure AI eseguendo il comando appropriato per la lingua scelta:

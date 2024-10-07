@@ -82,7 +82,7 @@ Al termine della configurazione, creare un progetto di classificazione personali
 1. Selezionare l'opzione **No, è necessario assegnare etichette ai file nell'ambito di questo progetto**. Quindi seleziona **Avanti**.
 1. Seleziona **Crea progetto**.
 
-> **Suggerimento**: se viene visualizzato un errore relativo alla mancata autorizzazione per eseguire questa operazione, è necessario aggiungere un'assegnazione di ruolo. Per risolvere questo problema, è stato aggiunto il ruolo "Collaboratore ai dati del BLOB di archiviazione" nell'account di archiviazione per l'utente che esegue il lab. Per informazioni dettagliate, vedere la [pagina della documentazione](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/how-to/create-project?tabs=portal%2Clanguage-studio#enable-identity-management-for-your-resource)
+> **Suggerimento**: se viene visualizzato un errore relativo alla mancata autorizzazione per eseguire questa operazione, è necessario aggiungere un'assegnazione di ruolo. Per risolvere questo problema, per l'utente che esegue il lab, è stato aggiunto il ruolo "Collaboratore ai dati del BLOB di archiviazione" nell'account di archiviazione. Per informazioni dettagliate, vedere la [pagina della documentazione](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/how-to/create-project?tabs=portal%2Clanguage-studio#enable-identity-management-for-your-resource)
 
 ## Assegnare etichette ai dati
 
