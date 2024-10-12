@@ -19,23 +19,23 @@ Se non è già disponibile una risorsa di **Traduttore per Azure AI** nella sott
     - **Gruppo di risorse**: *Scegliere o creare un gruppo di risorse*
     - **Area**: *scegliere una qualsiasi area disponibile*
     - **Nome**: *immettere un nome univoco*
-    - **Piano tariffario**: Selezionare **F0**, *gratuito*, o **S**, *Standard*, se F non è disponibile.
-    - **Avviso sull’intelligenza artificiale responsabile**: Accettare.
+    - **Piano tariffario**: Selezionare **F0** (*gratuito*) o **S** (*standard*) se F non è disponibile.
+    - **Informativa sull'Intelligenza artificiale responsabile**: D'accordo.
 1. Selezionare **Rivedi e crea**, quindi **Crea** per effettuare il provisioning della risorsa.
 1. Attendere il completamento della distribuzione e quindi passare alla risorsa distribuita.
-1. Visualizzare la pagina **Chiavi ed endpoint**. Le informazioni contenute in questa pagina saranno necessarie più avanti nell’esercizio.
+1. Visualizzare la pagina **Chiavi ed endpoint**. Le informazioni contenute in questa pagina saranno necessarie più avanti nell'esercizio.
 
 ## Prepararsi a sviluppare un’app in Visual Studio Code
 
 Si svilupperà l’app di traduzione testo usando Visual Studio Code. I file di codice per l’app sono stati forniti in un repository GitHub.
 
-> **Suggerimento**: Se è già stato clonato il repository **mslearn-ai-language**, aprirlo in Visual Studio Code. In caso contrario, seguire questa procedura per clonarlo nell’ambiente di sviluppo.
+> **Suggerimento**: se il repository **mslearn-ai-language** è già stato clonato, aprirlo in Visual Studio Code. In caso contrario, eseguire questi passaggi per clonarlo nell'ambiente di sviluppo.
 
 1. Avviare Visual Studio Code.
 2. Aprire il riquadro comandi (MAIUSC+CTRL+P) ed eseguire un comando **Git: Clone** per clonare il repository `https://github.com/MicrosoftLearning/mslearn-ai-language` in una cartella locale. Non è importante usare una cartella specifica.
 3. Dopo la clonazione del repository, aprire la cartella in Visual Studio Code.
 
-    > **Nota**: Se Visual Studio Code visualizza un messaggio popup per chiedere di considerare attendibile il codice che si sta aprendo, fare clic sull’opzione **Sì, si considerano attendibili gli autori** nel popup.
+    > **Nota**: Se Visual Studio Code visualizza un messaggio popup per chiedere se si considera attendibile il codice che si apre, fare clic sull'opzione **Sì, considero attendibili gli autori** nel popup.
 
 4. Attendere il completamento dell'installazione di file aggiuntivi per supportare i progetti in codice C# nel repository.
 

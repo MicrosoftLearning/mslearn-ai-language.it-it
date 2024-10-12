@@ -36,7 +36,7 @@ Se non è già disponibile nella sottoscrizione, sarà necessario effettuare il 
 
 Si svilupperà l'app voce usando Visual Studio Code. I file di codice per l'app sono stati forniti in un repository GitHub.
 
-> **Suggerimento**: Se il repository **mslearn-ai-language** è già stato clonato, aprirlo in Visual Studio Code. In caso contrario, seguire questa procedura per clonarla nell'ambiente di sviluppo.
+> **Suggerimento**: se il repository **mslearn-ai-language** è già stato clonato, aprirlo in Visual Studio Code. In caso contrario, eseguire questi passaggi per clonarlo nell'ambiente di sviluppo.
 
 1. Avviare Visual Studio Code.
 1. Aprire il riquadro comandi (MAIUSC+CTRL+P) ed eseguire un comando **Git: Clone** per clonare il repository `https://github.com/MicrosoftLearning/mslearn-ai-language` in una cartella locale. Non è importante usare una cartella specifica.
@@ -72,7 +72,7 @@ Sono state fornite applicazioni sia per C# che per Python. Entrambe le app prese
     - **C#**: appsettings.json
     - **Python**: .env
 
-1. Aggiornare i valori di configurazione per includere l'**area** e una **chiave** dalla risorsa Voce di Azure AI creata (disponibile nella pagina **Chiavi ed endpoint** per la risorsa Voce di Azure AI nel portale di Azure).
+1. Aggiornare i valori di configurazione per includere l'**area** e una **chiave** dalla risorsa di Voce di Azure AI creata (disponibile nella pagina **Chiavi ed endpoint** per la risorsa di Voce di Azure AI nel portale di Azure).
 
     > **NOTA**: Assicurarsi di aggiungere l'*area* per la risorsa, <u>non</u> l'endpoint.
 
@@ -85,7 +85,7 @@ Sono state fornite applicazioni sia per C# che per Python. Entrambe le app prese
     - **C#**: Program.cs
     - **Python**: speaking-clock.py
 
-    Aprire il file di codice e nella parte superiore, sotto i riferimenti agli spazi dei nomi esistenti, individuare il commento **Import namespaces**. In questo commento aggiungere quindi il codice seguente specifico del linguaggio per importare gli spazi dei nomi necessari per usare l'SDK di Voce di Azure AI:
+    Aprire il file di codice e nella parte superiore, sotto i riferimenti agli spazi dei nomi esistenti, individuare il commento **Import namespaces**. In questo commento aggiungere quindi il codice seguente specifico della lingua per importare gli spazi dei nomi necessari per usare l'SDK di Voce di Azure AI:
 
     **C#**: Program.cs
 
