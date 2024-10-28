@@ -88,7 +88,7 @@ Dopo aver creato il progetto, è necessario assegnare etichette ai dati per eseg
 
 1. Se la pagina **Etichettatura dati** non è già aperta, nel riquadro a sinistra selezionare **Etichettatura dati**. Viene visualizzato un elenco dei file caricati nell'account di archiviazione.
 1. Sul lato destro, nel riquadro **Attività**, selezionare**Aggiungi entità** e aggiungere una nuova entità denominata `ItemForSale`.
-1.  Ripetere il passaggio precedente o creare le entità seguenti:
+1.  Ripetere il passaggio precedente per creare le entità seguenti:
     - `Price`
     - `Location`
 1. Dopo aver creato le tre entità, selezionare **Ad 1.txt** in modo da poterla leggere.
@@ -96,7 +96,7 @@ Dopo aver creato il progetto, è necessario assegnare etichette ai dati per eseg
     1. Evidenziare il *pancale di legna da ardere* e selezionare l'entità **ItemForSale**.
     1. Evidenziare il testo *Denver, CO* e selezionare l'entità **Location**.
     1. Evidenziare il testo *$90* e selezionare l'entità **Price**.
-1. Nel riquadro **Attività**, si noti che questo documento verrà aggiunto al set di dati per il training del modello.
+1. Nel riquadro **Attività**, notare che questo documento verrà aggiunto al set di dati per il training del modello.
 1. Usare il pulsante **Documento successivo** per passare al documento successivo e continuare ad assegnare testo alle entità appropriate per l'intero set di documenti, aggiungendoli tutti al set di dati di training.
 1. Dopo aver etichettato l'ultimo documento (*Ad 9.txt*), salvare le etichette.
 
