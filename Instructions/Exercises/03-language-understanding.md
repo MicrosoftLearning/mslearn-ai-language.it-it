@@ -28,7 +28,19 @@ Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare
 1. Effettuare il provisioning della risorsa usando le impostazioni seguenti:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *Selezionare o creare un gruppo di risorse*.
-    - **Area**: *scegliere una qualsiasi area disponibile*
+    - **Area**: *scegliere tra una delle aree seguenti*\*
+        - Australia orientale
+        - India centrale
+        - Cina orientale 2
+        - Stati Uniti orientali
+        - Stati Uniti orientali 2
+        - Europa settentrionale
+        - Stati Uniti centro-meridionali
+        - Svizzera settentrionale
+        - Regno Unito meridionale
+        - Europa occidentale
+        - West US 2
+        - Stati Uniti occidentali 3
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: Selezionare **F0** (*gratuito*) o **S** (*standard*) se F non è disponibile.
     - **Informativa sull'Intelligenza artificiale responsabile**: D'accordo.
