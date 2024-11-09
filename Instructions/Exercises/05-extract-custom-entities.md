@@ -18,7 +18,18 @@ Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare
 1. Selezionare il pulsante **Crea una risorsa**, cercare *Lingua*, quindi creare una risorsa del servizio **Lingua**. Una volta nella pagina per *Selezionare funzionalità aggiuntive*, selezionare la funzionalità personalizzata contenente **l'estrazione di riconoscimento entità denominata personalizzata**. Creare la risorsa con le impostazioni seguenti:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*
     - **Gruppo di risorse**: *Selezionare o creare un gruppo di risorse*
-    - **Area**: *scegliere una qualsiasi area disponibile*
+    - **Area**: *scegliere tra una delle aree seguenti*\*
+        - Australia orientale
+        - India centrale
+        - Stati Uniti orientali
+        - Stati Uniti orientali 2
+        - Europa settentrionale
+        - Stati Uniti centro-meridionali
+        - Svizzera settentrionale
+        - Regno Unito meridionale
+        - Europa occidentale
+        - West US 2
+        - Stati Uniti occidentali 3
     - **Nome**: *immettere un nome univoco*
     - **Piano tariffario**: Selezionare **F0** (*gratuito*) o **S** (*standard*) se F non è disponibile.
     - **Account di archiviazione**: Nuovo account di archiviazione:
