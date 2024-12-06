@@ -41,6 +41,16 @@ Se non ne è già disponibile una nella sottoscrizione, è necessario effettuare
 1. Attendere il completamento della distribuzione e quindi passare alla risorsa distribuita.
 1. Visualizzare la pagina **Chiavi ed endpoint**. Le informazioni contenute in questa pagina saranno necessarie più avanti nell'esercizio.
 
+## Ruoli per l'utente
+> **NOTA**: se si ignora questo passaggio, si riscontrerà un errore 403 quando si tenta di connettersi al progetto personalizzato. È importante che l'utente corrente abbia questo ruolo per accedere ai dati BLOB dell'account di archiviazione, anche se si è il proprietario dell'account di archiviazione.**
+
+1. Accedere alla pagina dell’account di archiviazione nel portale di Azure.
+2. Selezionare **Controllo di accesso (IAM)** nel menu di spostamento a sinistra.
+3. Selezionare **Aggiungi** per aggiungere assegnazioni di ruolo e scegliere il ruolo di **collaboratore ai dati del BLOB di archiviazione** nell'account di archiviazione.
+4. In **Assegna accesso a**, selezionare **Utente, gruppo o entità servizio**.
+5. Selezionare **Selezionare i membri**.
+6. Selezionare l'utente. È possibile cercare nomi utente nel campo **Seleziona**.
+
 ## Caricare annunci di esempio
 
 Dopo aver creato il servizio Lingua di Azure AI e l'account di archiviazione, sarà necessario caricare annunci di esempio per eseguire il training del modello in un secondo momento.
