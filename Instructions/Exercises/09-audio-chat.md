@@ -6,7 +6,7 @@ lab:
 
 # Sviluppare un'app di chat abilitata per gli audio
 
-In questo esercizio, verrà usato il modello di intelligenza artificiale generativa *Phi-4-multimodal-instruct* per generare risposte a richieste che includono file audio. Verrà sviluppata un'applicazione che fornisce assistenza AI per i prodotti freschi in un negozio di alimentari usando Fonderia Azure AI e il servizio dell'inferenza del modello di Azure per intelligenza artificiale.
+In questo esercizio, verrà usato il modello di intelligenza artificiale generativa *Phi-4-multimodal-instruct* per generare risposte a richieste che includono file audio. Verrà sviluppata un'app con l'assistenza dell'intelligenza artificiale per una società di produzione usando Fonderia Azure AI e il servizio di inferenza del modello di Azure AI per riepilogare i messaggi vocali lasciati dalla clientela.
 
 Questo esercizio richiede circa **30** minuti.
 
@@ -95,13 +95,13 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
     **Python**
 
     ```
-    cd mslearn-ai-audio/Labfiles/09-audio-chat/python
+    cd mslearn-ai-audio/Labfiles/09-audio-chat/Python
     ```
 
     **C#**
 
     ```
-    cd mslearn-ai-audio/Labfiles/09-audio-chat/c-sharp
+    cd mslearn-ai-audio/Labfiles/09-audio-chat/C-sharp
     ```
 
 1. Nel riquadro della riga di comando di Cloud Shell immettere il comando seguente per installare le librerie che si useranno, ovvero:
@@ -111,7 +111,7 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
     ```
     python -m venv labenv
     ./labenv/bin/Activate.ps1
-    pip install python-dotenv azure-identity azure-ai-projects azure-ai-inference
+    pip install -r requirements.txt azure-identity azure-ai-projects azure-ai-inference
     ```
 
     **C#**
@@ -173,9 +173,6 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
         SystemMessage,
         UserMessage,
         TextContentItem,
-        AudioContentItem,
-        InputAudio,
-        AudioContentFormat,
     )
     ```
 
@@ -230,13 +227,13 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
 
 1. Nell'editor di codice del file **audio-chat.py**, nella sezione del ciclo, sotto il commento **Ottieni una risposta all'input audio**, aggiungere il seguente codice per inviare un prompt che includa il seguente audio:
 
-    <video controls src="../media/manzanas.mp4" title="Richiesta di mele" width="150"></video>
+    <video controls src="../media/avocados.mp4" title="Una richiesta di avocado" width="150"></video>
 
     **Python**
 
     ```python
     # Get a response to audio input
-    file_path = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/manzanas.mp3"
+    file_path = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/avocados.mp3"
     response = chat_client.complete(
         messages=[
             SystemMessage(system_message),
@@ -258,7 +255,7 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
 
     ```csharp
     // Get a response to audio input
-    string audioUrl = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/manzanas.mp3";
+    string audioUrl = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/avocados.mp3";
     var requestOptions = new ChatCompletionsOptions()
     {
         Messages =
@@ -290,21 +287,25 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
     dotnet run
     ```
 
-1. Quando richiesto, immettere il prompt `What is this customer saying in English?`
+1. Quando richiesto, immettere il prompt 
+
+    ```
+    Can you summarize this customer's voice message?
+    ```
 
 1. Rivedere la risposta.
 
-### Usare un prompt diverso
+### Usare un file audio diverso
 
 1. Nell'editor di codice del codice dell'app, individuare il codice aggiunto in precedenza sotto il commento **Ottieni una risposta all'input immagine**. Modificare quindi il codice come segue per selezionare un file audio diverso:
 
-    <video controls src="../media/caomei.mp4" title="Richiesta di fragole" width="150"></video>
+    <video controls src="../media/fresas.mp4" title="Richiesta di fragole" width="150"></video>
 
     **Python**
 
     ```python
     # Get a response to audio input
-    file_path = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/caomei.mp3"
+    file_path = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/fresas.mp3"
     response = chat_client.complete(
         messages=[
             SystemMessage(system_message),
@@ -326,7 +327,7 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
 
     ```csharp
     // Get a response to audio input
-    string audioUrl = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/caomei.mp3";
+    string audioUrl = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/fresas.mp3";
     var requestOptions = new ChatCompletionsOptions()
     {
         Messages =
@@ -358,10 +359,10 @@ Dopo aver distribuito il modello, è possibile usare la distribuzione in un'appl
     dotnet run
     ```
 
-1. Quando richiesto, immettere la richiesta seguente:
-
+1. Quando richiesto, immettere la richiesta seguente: 
+    
     ```
-    A customer left this voice message, can you summarize it?
+    Can you summarize this customer's voice message? Is it time-sensitive?
     ```
 
 1. Rivedere la risposta. Immettere quindi `quit` per uscire dal programma.
