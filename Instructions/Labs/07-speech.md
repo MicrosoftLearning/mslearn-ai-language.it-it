@@ -25,7 +25,7 @@ Questo esercizio richiede circa **30** minuti.
 
 ## Creare una risorsa per Voce di Azure AI
 
-Per iniziare, creare una risorsa di Voce di Azure AI.
+Per iniziare, creare una risorsa Voce di Azure AI.
 
 1. Aprire il [portale di Azure](https://portal.azure.com) all'indirizzo `https://portal.azure.com` ed eseguire l'accesso usando l'account Microsoft associato alla sottoscrizione di Azure.
 1. Nel campo di ricerca, cercare **Servizio Voce**. Selezionarlo dall'elenco, quindi selezionare **Crea**.
@@ -243,9 +243,17 @@ Speech Synthesis Markup Language (SSML) consente di personalizzare la modalità 
     
     <video controls src="https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Instructions/media/Output2.mp4" title="Sono le 5:30. Ora di finire il lab." width="150"></video>
 
-## (FACOLTATIVO) E se si dispone di microfono e altoparlante?
+## Eseguire la pulizia
 
-Come input vocale per questo esercizio si sono utilizzati file audio per input e output vocale. Vediamo come modificare il codice per usare l'hardware audio.
+Al termine dell'esplorazione di Voce di Azure AI, è necessario eliminare le risorse create in questo esercizio per evitare di incorrere in costi di Azure non necessari.
+
+1. Chiudere il riquadro Azure Cloud Shell.
+1. Nel portale di Azure passare alla risorsa Voce di Azure AI creata in questo lab.
+1. Nella pagina della risorsa, selezionare **Elimina** e seguire le istruzioni per eliminare la risorsa.
+
+## E se si dispone di microfono e altoparlante?
+
+In questo esercizio l'ambiente di Azure Cloud Shell usato non supporta l'hardware audio, quindi sono stati usati file audio per l'input e l'output vocale. Vediamo come è possibile modificare il codice per usare l'hardware audio, se disponibile.
 
 ### Uso del riconoscimento vocale con un microfono
 
@@ -292,14 +300,6 @@ if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
 ```
 
 > **Nota**: l'altoparlante predefinito del sistema è l'output audio predefinito, quindi è possibile anche omettere completamente AudioConfig!
-
-## Eseguire la pulizia
-
-Al termine dell'esplorazione di Voce di Azure AI, è necessario eliminare le risorse create in questo esercizio per evitare di incorrere in costi di Azure non necessari.
-
-1. Chiudere il riquadro Azure Cloud Shell.
-1. Nel portale di Azure passare alla risorsa Voce di Azure AI creata in questo lab.
-1. Nella pagina della risorsa, selezionare **Elimina** e seguire le istruzioni per eliminare la risorsa.
 
 ## Ulteriori informazioni
 

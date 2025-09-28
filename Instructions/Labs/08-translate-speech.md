@@ -227,7 +227,7 @@ Se si è terminato di esplorare il servizio Voce di Azure AI, è possibile elimi
 
 ## E se si dispone di microfono e altoparlante?
 
-Come input vocale per questo esercizio si sono utilizzati file audio per input e output vocale. Vediamo come modificare il codice per usare l'hardware audio.
+In questo esercizio l'ambiente di Azure Cloud Shell usato non supporta l'hardware audio, quindi sono stati usati file audio per l'input e l'output vocale. Vediamo come è possibile modificare il codice per usare l'hardware audio, se disponibile.
 
 ### Uso della traduzione vocale con un microfono
 
@@ -258,7 +258,7 @@ Come input vocale per questo esercizio si sono utilizzati file audio per input e
             "hi": "hi-IN-MadhurNeural"
    }
    speech_config.speech_synthesis_voice_name = voices.get(targetLanguage)
-   audio_config_out = speech_sdk.audio.AudioConfig(use_default_speaker=True)
+   audio_config_out = speech_sdk.audio.AudioOutputConfig(use_default_speaker=True)
    speech_synthesizer = speech_sdk.SpeechSynthesizer(speech_config, audio_config_out)
    speak = speech_synthesizer.speak_text_async(translation).get()
    if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
