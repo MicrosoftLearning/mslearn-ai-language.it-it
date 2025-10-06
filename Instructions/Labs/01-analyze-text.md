@@ -56,7 +56,7 @@ Verrà sviluppato il codice usando Cloud Shell dal portale di Azure. I file di c
     git clone https://github.com/microsoftlearning/mslearn-ai-language
     ```
 
-    > **Suggerimento**: Quando si immettono i comandi in Cloud Shell, l'ouput può richiedere una grande quantità di buffer dello schermo. È possibile cancellare la schermata immettendo il `cls` comando per rendere più semplice concentrarsi su ogni attività.
+    > **Suggerimento**: quando vengono incollati i comandi in CloudShell, l'ouput può richiedere una grande quantità di buffer dello schermo. È possibile cancellare la schermata immettendo il `cls` comando per rendere più semplice concentrarsi su ogni attività.
 
 1. Dopo aver clonato il repository, passare alla cartella contenente i file di codice dell'applicazione:  
 
