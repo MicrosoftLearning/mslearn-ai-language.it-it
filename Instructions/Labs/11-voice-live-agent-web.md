@@ -248,7 +248,7 @@ Nella parte superiore dello script di distribuzione **azdeploy.sh** è necessari
 1. Eseguire i comandi seguenti in Cloud Shell per iniziare a modificare lo script di distribuzione.
 
     ```bash
-    cd ~/voice-live-web
+    cd ~/01-voice-live-web
     ```
     
     ```bash
